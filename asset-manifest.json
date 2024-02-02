@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/zionko0919_sean/static/css/main.f855e6bc.css",
+    "main.js": "/zionko0919_sean/static/js/main.9ebc34bc.js",
+    "static/js/592.84faa4e8.chunk.js": "/zionko0919_sean/static/js/592.84faa4e8.chunk.js",
+    "static/media/logo.svg": "/zionko0919_sean/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/zionko0919_sean/index.html",
+    "main.f855e6bc.css.map": "/zionko0919_sean/static/css/main.f855e6bc.css.map",
+    "main.9ebc34bc.js.map": "/zionko0919_sean/static/js/main.9ebc34bc.js.map",
+    "592.84faa4e8.chunk.js.map": "/zionko0919_sean/static/js/592.84faa4e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.9ebc34bc.js"
+  ]
+}
