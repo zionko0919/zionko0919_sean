@@ -3,21 +3,10 @@ import { useState } from 'react';
 import {
   Container, Box, Paper, Button, Typography, IconButton, Dialog, DialogContent, DialogTitle, Grid,
 } from '@mui/material';
-import folderIcon from './images/IconsExtractedFromW311/MSMAI010.ICO';
-import myResume from './my_files/myResume_sean.pdf';
-
-function ResumePDF() {
-  return (
-    <iframe
-      src={myResume}
-      title="resume_sean"
-      width="100%"
-      height="100%"
-    />
-  );
-}
+import HeaderMenu from './components/HeaderMenu';
 
 function App() {
+  const windowHeight = 'calc(100vh - 20px)';
   const [isFolderOpen, setIsFolderOpen] = useState(false);
   const folderOpenHandler = () => {
     setIsFolderOpen(true);
@@ -27,49 +16,14 @@ function App() {
   };
 
   return (
-    <div>
-      <Container sx={{ background: '#047e7e' }}>
-        <Typography>Zion Ko</Typography>
-        <Button onClick={folderOpenHandler}>
-          <img src={folderIcon} alt="oldFolderIcon" />
-        </Button>
-        <Dialog
-          fullScreen
-          open={isFolderOpen}
-          onClose={folderCloseHandler}
-          PaperProps={{ style: { borderRadius: 0 } }}
-        >
-          <Grid
-            container
-            direction="row"
-            justifyContent="space-between"
-            minWidth="100%"
-          >
-            <Typography align="center">
-              Resume
-            </Typography>
-            <Box>
-              <Button
-                size="small"
-                variant="outlined"
-                style={{
-                  color: 'black',
-                  borderRadius: 0,
-                  border: 'none',
-                  borderBlockColor: 'black',
-                }}
-                onClick={folderCloseHandler}
-              >
-                Close X
-              </Button>
-            </Box>
-          </Grid>
-          <DialogContent>
-            <ResumePDF />
-          </DialogContent>
-        </Dialog>
-      </Container>
-    </div>
+    <Box
+      maxWidth="100%"
+      sx={{
+        border: 1, borderRadius: 3, background: '#047e7e', height: windowHeight, margin: 1,
+      }}
+    >
+      <HeaderMenu />
+    </Box>
   );
 }
 
